@@ -1,0 +1,21 @@
+The solution involves carefully managing specificity.  If we want the `p` element within the `.container` to always inherit the color from its parent, we might use a different approach or add better specificity:
+
+```css
+div {
+  color: blue;
+}
+
+.container {
+  color: red; /*Override the div color*/
+}
+
+.container p {
+  color: inherit; /* Inherits from the parent container */
+}
+
+.container p.special {
+  color: purple; /* Still overrides the inherited red color */
+}
+```
+
+This revised CSS ensures that the `p` elements consistently inherit the color from their parent container, unless overridden by a more specific rule like `.container p.special`.
